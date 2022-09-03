@@ -1,2 +1,2 @@
 # Prog_web_I
-Aulas de programação web I
+Repositório das aulas de programação web I
