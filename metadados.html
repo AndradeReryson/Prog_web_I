@@ -3,6 +3,7 @@
 <head>
     <!-- Metadados -->
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="CSS/style.css"/>
     <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="HTML, Layout, Metadados, Comentarios, listas">
@@ -12,13 +13,13 @@
 </head>
 <body>
     <!-- header -->
-    <header>
+    <header class="flex-container" id="topo">
         <a href="index.html" title="Voltar para a pagina inicial"> <img src="imagem/FATEC_ZONA_LESTE.png" alt="Logo da Fatec Zona Leste nas cores cinza e vermelho"> </a>
     </header>
 
     <!-- nav -->
-    <nav>
-        <ul>
+    <nav class="flex-container">
+        <ul class="menu">
             <li><a href="index.html">Início</a></li>
             <li><a href="comentarios.html">Comentários</a></li>
             <li><a href="metadados.html">Metadados</a></li>
@@ -33,17 +34,17 @@
     </nav>
 
     <!-- main -->
-    <main>
+    <main class="flex-container" id="conteudo">
         <h1> Metadados </h1>
         <p> Metadados são dados externos à página que são usados ​​pelos navegadores (como exibir conteúdo), pelos mecanismos de pesquisa (palavras-chave) e outros serviços da web. </p>
         <p> Eles são integrados à página HTML pela tag &lt;meta&gt;</p> 
         <!-- &lt; = lower than / &gt; = greater than -->
-        <img src="imagem/metadados.png" alt="imagem demonstrando o uso de tags de metadados, sendo elas: Charset, description, keywords e author"> 
+        <img class="big" src="imagem/metadados.png" alt="imagem demonstrando o uso de tags de metadados, sendo elas: Charset, description, keywords e author"> 
 
     </main>
 
     <!-- Footer -->
-    <footer>
+    <footer class="flex-container" id="rodape">
         <p> Reryson Santos de Andrade <br> 
             Todos os direitos Reservados &copy; 2022 
         </p>

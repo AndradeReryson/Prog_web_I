@@ -4,21 +4,23 @@
     <!-- Metadados -->
     <meta charset="UTF-8">
     <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <link rel="stylesheet" href="CSS/style.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="HTML, Layout, Metadados, Comentarios, listas">
     <meta name="description" content="Criação de layout">
     <!-- fim metadados -->
     <title> Aulas Desenvolvimento Web 1</title>
 </head>
+
 <body>
     <!-- header -->
-    <header>
+    <header class="flex-container" id="topo">
         <a href="index.html" title="Voltar para a pagina inicial"> <img src="imagem/FATEC_ZONA_LESTE.png" alt="Logo da Fatec Zona Leste nas cores cinza e vermelho"> </a>
     </header>
 
     <!-- nav -->
-    <nav>
-        <ul>
+    <nav class="flex-container">
+        <ul class="menu">
             <li><a href="index.html">Início</a></li>
             <li><a href="comentarios.html">Comentários</a></li>
             <li><a href="metadados.html">Metadados</a></li>
@@ -33,7 +35,7 @@
     </nav>
 
     <!-- main -->
-    <main>
+    <main class="flex-container" id="conteudo">
         <h1> Aulas de Desenvolvimento Web 1 </h1>
         <h2> Conteudos: </h2>
         <ol>
@@ -45,10 +47,9 @@
     </main>
 
     <!-- Footer -->
-    <footer>
-        <p> Reryson Santos de Andrade <br> 
-            Todos os direitos Reservados &copy; 2022 
-        </p>
+    <footer class="flex-container" id="rodape">
+        <p> Reryson Santos de Andrade </p>
+        <p> Todos os direitos Reservados &copy; 2022 </p>
     </footer>
 </body>
 </html>

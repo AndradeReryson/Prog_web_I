@@ -3,6 +3,7 @@
 <head>
     <!-- Metadados -->
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="CSS/style.css"/>
     <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="HTML, Layout, Metadados, Comentarios, listas">
@@ -12,13 +13,13 @@
 </head>
 <body>
     <!-- header -->
-    <header>
+    <header class="flex-container" id="topo">
         <a href="index.html" title="Voltar para a pagina inicial"> <img src="imagem/FATEC_ZONA_LESTE.png" alt="Logo da Fatec Zona Leste nas cores cinza e vermelho"> </a>
     </header>
 
     <!-- nav -->
-    <nav>
-        <ul>
+    <nav class="flex-container">
+        <ul class="menu">
             <li><a href="index.html">Início</a></li>
             <li><a href="comentarios.html">Comentários</a></li>
             <li><a href="metadados.html">Metadados</a></li>
@@ -33,16 +34,16 @@
     </nav>
 
     <!-- main -->
-    <main>
+    <main class="flex-container" id="conteudo">
         <h1> Lista Não Ordenada </h1>
         <p> Uma lista não ordenada começa com a tag &lt;ul&gt; Cada item da lista começa com a tag &lt;li&gt; </p>
         <p> Os itens da lista serão marcados com marcadores (pequenos círculos pretos) por padrão: </p> 
-        <img src="imagem/ul.png" alt="imagem mostrando como criar uma lista não ordenada com as tags 'ul' e 'li'"> 
+        <img class="small" src="imagem/ul.png" alt="imagem mostrando como criar uma lista não ordenada com as tags 'ul' e 'li'"> 
 
     </main>
 
     <!-- Footer -->
-    <footer>
+    <footer class="flex-container" id="rodape">
         <p> Reryson Santos de Andrade <br> 
             Todos os direitos Reservados &copy; 2022 
         </p>
