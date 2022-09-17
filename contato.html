@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Metadados -->
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <link rel="stylesheet" href="CSS/style.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="HTML, Layout, Metadados, Comentarios, listas">
+    <meta name="description" content="Criação de layout">
+    <!-- fim metadados -->
+    <title> Aulas Desenvolvimento Web 1</title>
+    <Style>
+        form {
+            width:30%; 
+            align-self: center;
+            padding: 5px;
+        }
+
+        form fieldset{
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            margin-bottom: 10px;
+            background-color: #f1f1f1;
+        }
+
+        form input, label{
+            height: 30px;
+            width: 450px;
+        }
+
+        form legend{
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+        form fieldset label, legend{
+            font-size: 0.9em;
+            margin: 0 0 0 10px
+        }
+
+        form label{
+            padding: 0 5px 0 5px;
+        }
+
+        form textarea{
+            max-width: 90%;
+            min-width: 80%;
+        }
+
+        form select{
+            width: 450px;
+        }
+
+        form input, select, textarea{
+            padding: 5px 0 5px 15px;
+            margin-bottom: 20px;
+            border-radius: 15px;
+            border: 1.5px black solid;
+        }
+
+        .required::after{
+            content: " *";
+            color: red;
+        }
+
+        form button{
+            padding: 5px 10px;
+            border-radius: 15px;
+            background-color: green;
+            color: #ffffff;
+            border: none;
+        }
+    </Style>
+</head>
+
+<body>
+    <!-- header -->
+    <header class="flex-container" id="topo">
+        <a href="index.html" title="Voltar para a pagina inicial"> <img src="imagem/FATEC_ZONA_LESTE.png" alt="Logo da Fatec Zona Leste nas cores cinza e vermelho" caption="logo da Fatec"> </a>
+    </header>
+
+    <!-- nav -->
+    <nav class="flex-container">
+        <ul class="menu">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="comentarios.html">Comentários</a></li>
+            <li><a href="metadados.html">Metadados</a></li>
+            <li> <a href="javascript:void(0);"> Listas</a>
+                <ul class="sub">
+                    <li><a href="ol.html"> Lista Ordenada </a></li>
+                    <li><a href="ul.html"> Lista Não Ordenada </a></li>
+                </ul>
+            </li>
+            <li><a href="layout.html"> Layout </a></li>
+            <li><a href="contato.html"> Contato </a></li>
+        </ul>
+    </nav>
+
+    <!-- main -->
+    <main class="flex-container" id="conteudo">
+        <h1> Fale conosco</h1>
+        <form id="form-contato" action="" method="post" name="contato" >
+            <fieldset>
+                <legend> Dados pessoais</legend>
+                <label for="nome" class="required"> Nome </label> <br>
+                <input type="text" name="txt_nome" id="nome" placeholder="insira seu nome" required> <br>
+                <!---->
+                <label for="cpf" class="required"> CPF </label> <br>
+                <input type="text" name="txt_cpf" id="cpf" placeholder="999.999.999-99" required> <br>
+                <!---->
+                <label for="data" class="required"> Data de Nascimento </label> <br>
+                <input type="date" name="txt_data-nasc" id="data" required> <Br>
+                <!---->
+                <label for="telefone"> Telefone </label> <br>
+                <input type="tel" name="txt_telefone" id="telefone" placeholder="(99) 9999-9999">  <br>
+                <!---->
+                <label for="email" class="required"> Email </label> <br>
+                <input type="email" name="txt_email" id="email" placeholder="nome@site.com" required> <br>
+                <!---->
+            </fieldset>
+            <fieldset>
+                <legend> Endereço </legend>
+                <label for="cep" class="required"> CEP </label> <br>
+                <input type="text" name="txt_cep" id="cep" placeholder="00000-000" required> <br>
+                <!---->
+                <label for="rua"> Rua </label> <br>
+                <input type="text" name="txt_rua" id="rua"> <br>
+                <!---->
+                <label for="numero" class="required"> Numero </label> <br>
+                <input type="number" name="txt_numero" id="numero" required> <br>
+                <!---->
+                <label for="complemento"> Complemento </label> <br>
+                <input type="text" name="txt_complemento" id="complemento" placeholder="Casa/Loja"> <br>
+                <!---->
+                <label for="bairro" class="required"> Bairro </label> <br>
+                <input type="text" name="txt_bairro" id="bairro" required> <br>
+                <!---->
+                <label for="cidade" class="required"> Cidade </label>  <br>
+                <input type="text" name="txt" id="cidade" required> <br>
+                <!---->
+                <label for="estado" class="required"> Estado  </label> <br>
+                <input type="text" name="txt_estado" id="estado" required> <br>
+                <!---->
+                
+            </fieldset>
+            <fieldset>
+                <legend> Mensagem </legend>
+                <label for="curso" class="required"> Curso </label> <br>
+                <select name="txt_curso" id="curso" required> 
+                    <option value="" selected disabled> Selecione um curso </option>
+                    <option value="ads"> Analise e Desenvolvimento de Sistemas</option>
+                    <option value="comex"> Comercio Exterior</option>
+                    <option value="dpp"> Desenvolvimento de Produtos Plasticos</option>
+                    <option value="dsm"> Desenvolvimento de Software Multiplataforma</option>
+                    <option value="ge"> Gestão Empresarial</option>
+                    <option value="rh"> Gestão de Recursos Humanos</option>
+                    <option value="log"> Logística </option>
+                    <option value="pol"> Polímeros </option>
+                </select> <br>
+                <!---->
+                <label for="assunto" class="required"> Assunto </label> <br>
+                <select name="txt_assunto" id="assunto">
+                    <option value="" selected disabled> Selecione um assunto </option>
+                    <option value="elogio"> Elogio </option>
+                    <option value="sugestao"> Sugestão </option>
+                    <option value="reclamacao"> Reclamação</option>
+                    <option value="outros"> Outros</option>
+                </select> <br>
+                <!---->
+                <label for="msg" class="required"> Mensagem </label> <Br>
+                <textarea name="txt_mensagem" id="msg" cols="40" rows="5" required> Escreva sua mensagem</textarea>
+            </fieldset>
+            <button type="submit"> Enviar </button>
+            <button type="submit"> Limpar </button>
+
+        </form>
+    </main>
+
+    <!-- Footer -->
+    <footer class="flex-container" id="rodape">
+        <p> Reryson Santos de Andrade </p>
+        <p> Todos os direitos Reservados &copy; 2022 </p>
+        <br>
+    </footer>
+</body>
+</html>

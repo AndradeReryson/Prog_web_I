@@ -60,7 +60,7 @@ nav{
 
 .menu li a:hover{
     color: #000;
-    transition: 0.3s;
+    transition: 0.5s;
 }
 
 .menu li ul{
@@ -70,16 +70,23 @@ nav{
     top: 70px;
     left: 0;
     transition: 0.5s;
+    overflow: hidden; 
+}
+
+.menu li ul li{
+    display: none;
+    width: 170px;
+    transition: 0.5s;
 }
 
 .menu li:hover ul{
-    display: block;
     height: 110px;
     transition: 0.5s;
 }
 
-.menu li ul li{
-    width: 170px;
+.menu li:hover ul li{
+    display: block;
+    transition: 0.5s;
 }
 
 /* main */
