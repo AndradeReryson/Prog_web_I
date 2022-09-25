@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
     <link rel="stylesheet" href="CSS/style.css"/>
+    <link rel="icon" href="imagem/favicon.png" typ="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="HTML, Layout, Metadados, Comentarios, listas">
     <meta name="description" content="Criação de layout">
@@ -38,6 +39,12 @@
     <!-- main -->
     <main class="flex-container" id="conteudo">
         <h1> Aulas de Desenvolvimento Web 1 </h1>
+        <div class="lemon">
+            <img src="imagem/lemon.png" onclick="lemon_play()">
+            <audio class="invisivel" controls>
+                <source src="audio/hard-days-night.mp3" type="audio/mp3">
+            </audio>
+        </div>
         <h2> Conteudos: </h2>
         <ol>
             <li> Comentarios </li>
@@ -45,6 +52,9 @@
             <li> Listas </li>
             <li> Layout </li>
         </ol>
+        <video controls>
+            <source src="video/video.mp4" type="video/mp4">
+        </video>
     </main>
 
     <!-- Footer -->
@@ -52,5 +62,40 @@
         <p> Reryson Santos de Andrade </p>
         <p> Todos os direitos Reservados &copy; 2022 </p>
     </footer>
+
+    <script type="text/javascript"> 
+        var aux = 0;
+        var audio = document.querySelector('audio');
+        var corpo = document.querySelector('body');
+        var video = document.querySelector('video');
+        var topo = document.querySelector('#topo');
+        var nav = document.querySelector('ul.menu');
+        var rodape = document.querySelector('#rodape');
+
+        function lemon_play() {
+            if (aux == 0){
+                //audio.classList.remove('invisivel');
+                corpo.classList.add('yellow');
+                video.classList.add('invisivel');
+                topo.classList.add('invisivel');
+                nav.classList.add('invisivel');
+                rodape.classList.add('invisivel');
+                //
+                audio.play();
+                aux = 1;
+            } else {
+                //audio.classList.add('invisivel');
+                corpo.classList.remove('yellow');
+                video.classList.remove('invisivel');
+                topo.classList.remove('invisivel');
+                nav.classList.remove('invisivel');
+                rodape.classList.remove('invisivel');
+                //
+                audio.pause();
+                aux = 0;
+            }   
+
+        }
+    </script>
 </body>
 </html>

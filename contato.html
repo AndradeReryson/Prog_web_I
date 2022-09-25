@@ -10,68 +10,6 @@
     <meta name="description" content="Criação de layout">
     <!-- fim metadados -->
     <title> Aulas Desenvolvimento Web 1</title>
-    <Style>
-        form {
-            width:30%; 
-            align-self: center;
-            padding: 5px;
-        }
-
-        form fieldset{
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-            margin-bottom: 10px;
-            background-color: #f1f1f1;
-        }
-
-        form input, label{
-            height: 30px;
-            width: 450px;
-        }
-
-        form legend{
-            font-size: 1.3em;
-            font-weight: bold;
-        }
-        form fieldset label, legend{
-            font-size: 0.9em;
-            margin: 0 0 0 10px
-        }
-
-        form label{
-            padding: 0 5px 0 5px;
-        }
-
-        form textarea{
-            max-width: 90%;
-            min-width: 80%;
-        }
-
-        form select{
-            width: 450px;
-        }
-
-        form input, select, textarea{
-            padding: 5px 0 5px 15px;
-            margin-bottom: 20px;
-            border-radius: 15px;
-            border: 1.5px black solid;
-        }
-
-        .required::after{
-            content: " *";
-            color: red;
-        }
-
-        form button{
-            padding: 5px 10px;
-            border-radius: 15px;
-            background-color: green;
-            color: #ffffff;
-            border: none;
-        }
-    </Style>
 </head>
 
 <body>
@@ -171,8 +109,10 @@
                 <label for="msg" class="required"> Mensagem </label> <Br>
                 <textarea name="txt_mensagem" id="msg" cols="40" rows="5" required> Escreva sua mensagem</textarea>
             </fieldset>
-            <button type="submit"> Enviar </button>
-            <button type="submit"> Limpar </button>
+            <div class="box-buttons">
+                <button type="submit"> Enviar </button>
+                <button type="submit"> Limpar </button>
+            </div>
 
         </form>
     </main>
