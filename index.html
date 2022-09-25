@@ -55,6 +55,8 @@
         <video controls>
             <source src="video/video.mp4" type="video/mp4">
         </video>
+        <!-- lemon -->
+        <div class="lemon-container invisivel"></div>
     </main>
 
     <!-- Footer -->
@@ -66,30 +68,20 @@
     <script type="text/javascript"> 
         var aux = 0;
         var audio = document.querySelector('audio');
-        var corpo = document.querySelector('body');
-        var video = document.querySelector('video');
-        var topo = document.querySelector('#topo');
-        var nav = document.querySelector('ul.menu');
-        var rodape = document.querySelector('#rodape');
+        var lemon_back = document.querySelector('.lemon-container');
 
         function lemon_play() {
             if (aux == 0){
                 //audio.classList.remove('invisivel');
-                corpo.classList.add('yellow');
-                video.classList.add('invisivel');
-                topo.classList.add('invisivel');
-                nav.classList.add('invisivel');
-                rodape.classList.add('invisivel');
+                lemon_back.classList.remove('invisivel')
+                audio.classList.remove('invisivel')
                 //
                 audio.play();
                 aux = 1;
             } else {
                 //audio.classList.add('invisivel');
-                corpo.classList.remove('yellow');
-                video.classList.remove('invisivel');
-                topo.classList.remove('invisivel');
-                nav.classList.remove('invisivel');
-                rodape.classList.remove('invisivel');
+                lemon_back.classList.add('invisivel')
+                audio.classList.add('invisivel')
                 //
                 audio.pause();
                 aux = 0;
