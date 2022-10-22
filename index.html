@@ -12,9 +12,7 @@
     <!-- fim metadados -->
     <title> Aulas Desenvolvimento Web 1</title>
     <style>
-        .lemon{
-            display:none;
-        }
+
     </style>
 </head>
 
@@ -54,6 +52,8 @@
 
     <!-- nav -->
     <nav class="flex-container">
+        <label for="bt_menu"><img src="imagem/menu.png" alt="botão de menu"></label>
+        <input type="checkbox" name="bt_menu" id="bt_menu" value="1">
         <ul id="menu" class="menu">
             <li><a href="index.html">Início</a></li>
             <li><a href="comentarios.html">Comentários</a></li>
@@ -71,25 +71,19 @@
 
     <!-- main -->
     <main class="flex-container" id="conteudo">
-        <h1> Aulas de Desenvolvimento Web 1 </h1>
-        <div class="lemon">
-            <img src="imagem/lemon.png" onclick="lemon_play()">
-            <audio class="invisivel" controls>
-                <source src="audio/hard-days-night.mp3" type="audio/mp3">
-            </audio>
-        </div>
-        <h2> Conteudos: </h2>
-        <ol>
-            <li> Comentarios </li>
-            <li> Metadados </li>
-            <li> Listas </li>
-            <li> Layout </li>
-        </ol>
-        <video controls>
-            <source src="video/video.mp4" type="video/mp4">
-        </video>
-        <!-- lemon -->
-        <div class="lemon-container invisivel"></div>
+        <section>
+            <h1> Aulas de Desenvolvimento Web 1 </h1>
+            <h2> Conteudos: </h2>
+            <ol>
+                <li> Comentarios </li>
+                <li> Metadados </li>
+                <li> Listas </li>
+                <li> Layout </li>
+            </ol>
+            <video controls>
+                <source src="video/video.mp4" type="video/mp4">
+            </video>
+        </section>
     </main>
 
     <!-- Footer -->
@@ -99,28 +93,7 @@
     </footer>
 
     <script type="text/javascript"> 
-        var aux = 0;
-        var audio = document.querySelector('audio');
-        var lemon_back = document.querySelector('.lemon-container');
-
-        function lemon_play() {
-            if (aux == 0){
-                //audio.classList.remove('invisivel');
-                lemon_back.classList.remove('invisivel')
-                audio.classList.remove('invisivel')
-                //
-                audio.play();
-                aux = 1;
-            } else {
-                //audio.classList.add('invisivel');
-                lemon_back.classList.add('invisivel')
-                audio.classList.add('invisivel')
-                //
-                audio.pause();
-                aux = 0;
-            }   
-
-        }
+        
     </script>
 </body>
 </html>
