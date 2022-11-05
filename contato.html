@@ -48,6 +48,8 @@
         
     <!-- nav -->
     <nav class="flex-container">
+        <label for="bt_menu"><img src="imagem/menu.png" alt="botão de menu"></label>
+        <input type="checkbox" name="bt_menu" id="bt_menu" value="1">
         <ul class="menu">
             <li><a href="index.html">Início</a></li>
             <li><a href="comentarios.html">Comentários</a></li>
@@ -65,84 +67,90 @@
 
     <!-- main -->
     <main class="flex-container" id="conteudo">
-        <h1> Fale conosco</h1>
-        <form id="form-contato" action="" method="post" name="contato" >
-            <fieldset>
-                <legend> Dados pessoais</legend>
-                <label for="nome" class="required"> Nome </label> <br>
-                <input type="text" name="txt_nome" id="nome" placeholder="insira seu nome" required> <br>
-                <!---->
-                <label for="cpf" class="required"> CPF </label> <br>
-                <input type="text" name="txt_cpf" id="cpf" placeholder="999.999.999-99" required> <br>
-                <!---->
-                <label for="data" class="required"> Data de Nascimento </label> <br>
-                <input type="date" name="txt_data-nasc" id="data" required> <Br>
-                <!---->
-                <label for="telefone"> Telefone </label> <br>
-                <input type="tel" name="txt_telefone" id="telefone" placeholder="(99) 9999-9999">  <br>
-                <!---->
-                <label for="email" class="required"> Email </label> <br>
-                <input type="email" name="txt_email" id="email" placeholder="nome@site.com" required> <br>
-                <!---->
-            </fieldset>
-            <fieldset>
-                <legend> Endereço </legend>
-                <label for="cep" class="required"> CEP </label> <br>
-                <input type="text" name="txt_cep" id="cep" placeholder="00000-000" required> <br>
-                <!---->
-                <label for="rua"> Rua </label> <br>
-                <input type="text" name="txt_rua" id="rua"> <br>
-                <!---->
-                <label for="numero" class="required"> Numero </label> <br>
-                <input type="number" name="txt_numero" id="numero" required> <br>
-                <!---->
-                <label for="complemento"> Complemento </label> <br>
-                <input type="text" name="txt_complemento" id="complemento" placeholder="Casa/Loja"> <br>
-                <!---->
-                <label for="bairro" class="required"> Bairro </label> <br>
-                <input type="text" name="txt_bairro" id="bairro" required> <br>
-                <!---->
-                <label for="cidade" class="required"> Cidade </label>  <br>
-                <input type="text" name="txt" id="cidade" required> <br>
-                <!---->
-                <label for="estado" class="required"> Estado  </label> <br>
-                <input type="text" name="txt_estado" id="estado" required> <br>
-                <!---->
-                
-            </fieldset>
-            <fieldset>
-                <legend> Mensagem </legend>
-                <label for="curso" class="required"> Curso </label> <br>
-                <select name="txt_curso" id="curso" required> 
-                    <option value="" selected disabled> Selecione um curso </option>
-                    <option value="ads"> Analise e Desenvolvimento de Sistemas</option>
-                    <option value="comex"> Comercio Exterior</option>
-                    <option value="dpp"> Desenvolvimento de Produtos Plasticos</option>
-                    <option value="dsm"> Desenvolvimento de Software Multiplataforma</option>
-                    <option value="ge"> Gestão Empresarial</option>
-                    <option value="rh"> Gestão de Recursos Humanos</option>
-                    <option value="log"> Logística </option>
-                    <option value="pol"> Polímeros </option>
-                </select> <br>
-                <!---->
-                <label for="assunto" class="required"> Assunto </label> <br>
-                <select name="txt_assunto" id="assunto">
-                    <option value="" selected disabled> Selecione um assunto </option>
-                    <option value="elogio"> Elogio </option>
-                    <option value="sugestao"> Sugestão </option>
-                    <option value="reclamacao"> Reclamação</option>
-                    <option value="outros"> Outros</option>
-                </select> <br>
-                <!---->
-                <label for="msg" class="required"> Mensagem </label> <Br>
-                <textarea name="txt_mensagem" id="msg" cols="40" rows="5" required> Escreva sua mensagem</textarea>
-            </fieldset>
-            <div class="box-buttons">
-                <button type="submit"> Enviar </button>
-                <button type="submit"> Limpar </button>
-            </div>
+        <ul class="breadcrumb">
+            <li><a href="index.html">Início</a></li>
+            <li>Contato</li>
+        </ul>
+        <section>
+            <h1> Fale conosco</h1>
+            <form id="form-contato" action="" method="post" name="contato" >
+                <fieldset>
+                    <legend> Dados pessoais</legend>
+                    <label for="nome" class="required"> Nome </label> <br>
+                    <input type="text" name="txt_nome" id="nome" placeholder="insira seu nome" required> <br>
+                    <!---->
+                    <label for="cpf" class="required"> CPF </label> <br>
+                    <input type="text" name="txt_cpf" id="cpf" placeholder="999.999.999-99" required> <br>
+                    <!---->
+                    <label for="data" class="required"> Data de Nascimento </label> <br>
+                    <input type="date" name="txt_data-nasc" id="data" required> <Br>
+                    <!---->
+                    <label for="telefone"> Telefone </label> <br>
+                    <input type="tel" name="txt_telefone" id="telefone" placeholder="(99) 9999-9999">  <br>
+                    <!---->
+                    <label for="email" class="required"> Email </label> <br>
+                    <input type="email" name="txt_email" id="email" placeholder="nome@site.com" required> <br>
+                    <!---->
+                </fieldset>
+                <fieldset>
+                    <legend> Endereço </legend>
+                    <label for="cep" class="required"> CEP </label> <br>
+                    <input type="text" name="txt_cep" id="cep" placeholder="00000-000" required> <br>
+                    <!---->
+                    <label for="rua"> Rua </label> <br>
+                    <input type="text" name="txt_rua" id="rua"> <br>
+                    <!---->
+                    <label for="numero" class="required"> Numero </label> <br>
+                    <input type="number" name="txt_numero" id="numero" required> <br>
+                    <!---->
+                    <label for="complemento"> Complemento </label> <br>
+                    <input type="text" name="txt_complemento" id="complemento" placeholder="Casa/Loja"> <br>
+                    <!---->
+                    <label for="bairro" class="required"> Bairro </label> <br>
+                    <input type="text" name="txt_bairro" id="bairro" required> <br>
+                    <!---->
+                    <label for="cidade" class="required"> Cidade </label>  <br>
+                    <input type="text" name="txt" id="cidade" required> <br>
+                    <!---->
+                    <label for="estado" class="required"> Estado  </label> <br>
+                    <input type="text" name="txt_estado" id="estado" required> <br>
+                    <!---->
+                    
+                </fieldset>
+                <fieldset>
+                    <legend> Mensagem </legend>
+                    <label for="curso" class="required"> Curso </label> <br>
+                    <select name="txt_curso" id="curso" required> 
+                        <option value="" selected disabled> Selecione um curso </option>
+                        <option value="ads"> Analise e Desenvolvimento de Sistemas</option>
+                        <option value="comex"> Comercio Exterior</option>
+                        <option value="dpp"> Desenvolvimento de Produtos Plasticos</option>
+                        <option value="dsm"> Desenvolvimento de Software Multiplataforma</option>
+                        <option value="ge"> Gestão Empresarial</option>
+                        <option value="rh"> Gestão de Recursos Humanos</option>
+                        <option value="log"> Logística </option>
+                        <option value="pol"> Polímeros </option>
+                    </select> <br>
+                    <!---->
+                    <label for="assunto" class="required"> Assunto </label> <br>
+                    <select name="txt_assunto" id="assunto">
+                        <option value="" selected disabled> Selecione um assunto </option>
+                        <option value="elogio"> Elogio </option>
+                        <option value="sugestao"> Sugestão </option>
+                        <option value="reclamacao"> Reclamação</option>
+                        <option value="outros"> Outros</option>
+                    </select> <br>
+                    <!---->
+                    <label for="msg" class="required"> Mensagem </label> <Br>
+                    <textarea name="txt_mensagem" id="msg" cols="40" rows="5" required> Escreva sua mensagem</textarea>
+                </fieldset>
+                <div class="box-buttons">
+                    <button type="submit"> Enviar </button>
+                    <button type="submit"> Limpar </button>
+                </div>
 
-        </form>
+            </form>
+        </section>
     </main>
 
     <!-- Footer -->
