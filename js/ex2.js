@@ -20,7 +20,8 @@ function validar(){
     if(senha != confirm){
         alert("Senhas estão diferentes")
         cadastro.senha.value = null
-        cadastro.conf_senha.focus()
+        cadastro.conf_senha.value = null
+        cadastro.senha.focus()
         return false
     }
 

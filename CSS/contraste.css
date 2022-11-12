@@ -1,0 +1,486 @@
+/* config gerais */
+*{
+    margin: 0;
+    padding: 0;
+} 
+
+.flex-container{
+    display: flex;
+    width: 100%;
+}
+
+body, html{
+    background-color: #000;
+}
+
+/* barra acessibilidade*/
+
+.acessibilidade{
+    background-color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+}
+
+.atalhos, .links_acess{
+    list-style: none;
+    display: inline-flex;
+    padding: 5px;
+}
+
+.atalhos li, .links_acess li{
+    padding-left: 5px;
+}
+
+.atalhos li a, .links_acess li a{
+    color: yellow;
+}
+
+.links_acess{
+    margin-left: 50%;
+    
+}
+/* header */
+#topo{
+    width: 100%;
+    background-color: #000;
+    justify-content: center;
+    height: auto;
+    align-items: center;
+}
+
+#topo a{
+    text-align: center;
+}
+
+#topo img{
+    width: 50%;
+    filter: invert;
+}
+
+/* nav */
+nav{
+    width: 100%;
+    background-color:  #000;
+    height: auto;
+    justify-content: center;
+}
+
+.menu{
+    display: inline-flex;
+    justify-content: space-around;
+}
+
+.menu li{
+    list-style: none;
+    position: relative;
+    padding: 10%;
+}
+
+.menu li a{
+    color: yellow;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: Helvetica, Arial;
+    font-size: 1vw;
+}
+
+.menu li a:hover{
+    color: #fff;
+    transition: 0.5s;
+}
+
+.menu li ul{
+    height: 0;
+    position: absolute;
+    background-color: #000;
+    top: 90px;
+    left: 0;
+    transition: 0.5s;
+    overflow: hidden; 
+}
+
+.menu li ul li{
+    display: none;
+    width: 220px;
+    transition: 0.5s;
+}
+
+.menu li:hover ul{
+    height: 130px;
+    transition: 0.5s;
+}
+
+.menu li:hover ul li{
+    display: block;
+    transition: 0.5s;
+}
+
+/* ocultar botao de menu */
+label[for="bt_menu"], #bt_menu{
+    z-index: 2;
+    display: none;
+}
+
+/* main */
+#conteudo{
+    flex-direction: column;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 2vh;
+    margin: 2% 0 2% 0;
+    overflow: hidden;
+    background-color: #000;
+    color: #fff
+}
+
+section{
+    padding: 2% 10%;
+}
+
+#conteudo p, ol, h2, img{
+    font-size: 1.3vw;
+    padding: 1% 3%;
+}
+
+.breadcrumb{
+    width: 80%;
+    background-color: #000;
+    border-radius: 15px;
+    padding: 1%;
+    margin: 0 10%;
+    list-style: none;
+}
+
+.breadcrumb ul{
+    margin: 0;
+}
+
+.breadcrumb li{
+    display: inline;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8em;
+    color: #fff;
+}
+
+
+.breadcrumb li a{
+    color: yellow;
+}
+
+.breadcrumb li a:hover{
+    color: #fff;
+    transition: 0.2s;
+}
+
+.breadcrumb li+li::before{
+    content: "/\00a0";
+    padding: 6px;
+    color: #fff;
+}
+
+#conteudo h1{
+    text-align: center;
+    padding: 2% 5%;
+    font-size: 2.6vw
+}
+
+#conteudo ul.desc{
+    margin-left: 7%;
+    text-decoration: none;
+} 
+
+#conteudo img.big{
+    width: 50%;
+}
+
+#conteudo img.small{
+    width: 30%;
+}
+
+video{
+    align-self: center;
+    width: 50%;
+    height: auto;
+}
+
+/* formulario */
+
+form {
+    width:50%;
+    margin: 0 0 5% 10%;
+    padding: 5px;
+}
+
+form fieldset{
+    width: 70%;
+    padding: 20px;
+    margin-bottom: 10px;
+    background-color: #000;
+}
+
+form input{
+    height: 20px;
+    width: 90%;
+}
+
+form label{
+    float: left;
+}
+
+form legend{
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+form fieldset legend, label{
+    color: white;
+}
+
+form fieldset input, select, textarea{
+    color: #000;
+    font-size: 1vw;
+    margin: 0 0 2% 1.3vw;
+}
+
+form fieldset label{
+    padding: 0 5px 0 5px;
+}
+
+form textarea{
+    resize:none;
+    width: 90%;
+}
+
+form select{
+    width: 96%;
+}
+
+form input, select, textarea{
+    padding: 5px 0 5px 15px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    border: 1.5px black solid;
+}
+
+.required::after{
+    content: " *";
+    color: #fff;
+}
+
+.box-buttons{
+    width: 70%;
+    text-align: right;
+    padding: 1em;
+    background-color: #000;
+    border: 1.9px solid #fff;
+}
+
+form button{
+    padding: 0.7vw 1.2vw;
+    border-radius: 15px;
+    background-color: #000;
+    color: #fff;
+    border: 1px solid white;
+    font-size: 1.1vw;
+    margin: 0 1% 0 1%;
+}
+
+/* footer */
+
+#rodape{
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    display: block;
+    padding-top: 2%;
+    height: auto;
+    background-color: #000;
+    color: #fff;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+#rodape p{
+    padding: 5px 5px;
+    font-size: 1.1vw;
+}
+
+/* aux javascript */
+.invisivel{
+    display: none;
+}
+
+
+/* media query barra de acessibilidade */
+@media screen and (max-width: 1680px){
+
+    .links_acess{
+        margin-left: 45%;
+    }
+}
+
+@media screen and (max-width: 1345px){
+
+    
+    .links_acess{
+        margin-left: 35%;
+    }
+
+    /*menu*/
+
+    .menu li ul{
+        height: 0;
+        position: absolute;
+        background-color: crimson;
+        top: 60px;
+        left: 0;
+        transition: 0.5s;
+        overflow: hidden; 
+    }
+    
+    .menu li ul li{
+        display: none;
+        width: 180px;
+        transition: 0.5s;
+    }
+}
+
+@media screen and (max-width: 850px){
+
+    .atalhos{
+        display: none;
+    }
+
+    .links_acess{
+        margin: auto;
+    }
+
+    /*menu*/
+
+    .menu li ul{
+        height: 0;
+        position: absolute;
+        background-color: crimson;
+        top: 50px;
+        left: 0;
+        transition: 0.5s;
+        overflow: hidden; 
+    }
+    
+    .menu li ul li{
+        display: none;
+        width: 150px;
+        transition: 0.5s;
+    }
+
+    .menu li:hover ul{
+        height: 100px;
+        transition: 0.5s;
+    }
+
+    /* conteudo */
+
+    #conteudo p, ol, h2, img{
+        font-size: 1.3vh;
+        padding: 1% 3%;
+    }
+
+    /* form */
+
+    
+    form button{
+        font-size: 1.1vh;
+    }
+
+    form fieldset label, legend, input, select, textarea{
+        font-size: 1.5vh;
+        margin: 0 0 2% 1.3vw;
+    }
+
+    /* rodapé */
+    
+    #rodape p{
+        padding: 5px 5px;
+        font-size: 1.3vh;
+    }
+}
+
+/* media querys menu responsivo */
+
+@media screen and (max-width: 740px){
+
+    nav{
+        justify-content: left;
+    }
+
+    .menu{
+
+        display:none;
+    }
+
+    label[for="bt_menu"]{
+        display: block;
+        margin: 2%;
+    }
+
+    #bt_menu:checked ~ .menu{
+        display:block;
+        width: 100%;
+       
+    }
+
+    .menu li{
+        padding: 10px 1px;
+    }
+
+    .menu li ul{
+        position: static;
+    }
+
+    .menu li a{
+        font-size: 1.1vh;
+    }
+
+    .menu li ul li{
+        position: relative;
+        display: block;
+    }
+
+    /* conteudo */
+
+    #conteudo p, ol, h2, img{
+        font-size: 1.3vh;
+        padding: 1% 3%;
+    }
+
+    .imagem{
+        width: 60%;
+        height: auto;
+    }
+
+    video{
+        width: 100%;
+        height: auto;
+        align-self: center;
+    }
+
+    /* form */
+
+    form button{
+        font-size: 1.1vh;
+    }
+
+    form fieldset label, legend, input, select, textarea{
+        font-size: 1.5vh;
+        margin: 0 0 2% 1.3vw;
+    }
+
+    /* rodapé */
+    
+    #rodape p{
+        padding: 5px 5px;
+        font-size: 1.3vh;
+    }
+
+}
